@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ClubTShirt
 {
-    public partial class Form1 : Form
+    public partial class T_Shirt_Sell : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public T_Shirt_Sell()
         {
             InitializeComponent();
         }
+
+        
     }
 }
