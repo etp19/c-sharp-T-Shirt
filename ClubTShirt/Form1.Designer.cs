@@ -34,6 +34,9 @@
             this.Make_Order = new MetroFramework.Controls.MetroButton();
             this.Process_menu = new System.Windows.Forms.MenuStrip();
             this.processToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Amount_TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Process_menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +52,7 @@
             // Amount_label
             // 
             this.Amount_label.AutoSize = true;
-            this.Amount_label.Location = new System.Drawing.Point(23, 212);
+            this.Amount_label.Location = new System.Drawing.Point(23, 225);
             this.Amount_label.Name = "Amount_label";
             this.Amount_label.Size = new System.Drawing.Size(90, 19);
             this.Amount_label.TabIndex = 0;
@@ -59,6 +62,11 @@
             // 
             this.size_chose.FormattingEnabled = true;
             this.size_chose.ItemHeight = 23;
+            this.size_chose.Items.AddRange(new object[] {
+            "S",
+            "M",
+            "L",
+            "XL"});
             this.size_chose.Location = new System.Drawing.Point(152, 161);
             this.size_chose.Name = "size_chose";
             this.size_chose.Size = new System.Drawing.Size(121, 29);
@@ -73,6 +81,7 @@
             this.Make_Order.TabIndex = 2;
             this.Make_Order.Text = "Make Order";
             this.Make_Order.UseSelectable = true;
+            this.Make_Order.Click += new System.EventHandler(this.Make_Order_Click);
             // 
             // Process_menu
             // 
@@ -86,15 +95,63 @@
             // 
             // processToolStripMenuItem
             // 
+            this.processToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.displayOrderToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.processToolStripMenuItem.Name = "processToolStripMenuItem";
-            this.processToolStripMenuItem.Size = new System.Drawing.Size(52, 19);
+            this.processToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.processToolStripMenuItem.Text = "Process";
+            // 
+            // displayOrderToolStripMenuItem
+            // 
+            this.displayOrderToolStripMenuItem.Name = "displayOrderToolStripMenuItem";
+            this.displayOrderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.displayOrderToolStripMenuItem.Text = "Display Order";
+            this.displayOrderToolStripMenuItem.Click += new System.EventHandler(this.displayOrderToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // Amount_TextBox
+            // 
+            // 
+            // 
+            // 
+            this.Amount_TextBox.CustomButton.Image = null;
+            this.Amount_TextBox.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.Amount_TextBox.CustomButton.Name = "";
+            this.Amount_TextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Amount_TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Amount_TextBox.CustomButton.TabIndex = 1;
+            this.Amount_TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Amount_TextBox.CustomButton.UseSelectable = true;
+            this.Amount_TextBox.CustomButton.Visible = false;
+            this.Amount_TextBox.Lines = new string[0];
+            this.Amount_TextBox.Location = new System.Drawing.Point(152, 220);
+            this.Amount_TextBox.MaxLength = 32767;
+            this.Amount_TextBox.Name = "Amount_TextBox";
+            this.Amount_TextBox.PasswordChar = '\0';
+            this.Amount_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Amount_TextBox.SelectedText = "";
+            this.Amount_TextBox.SelectionLength = 0;
+            this.Amount_TextBox.SelectionStart = 0;
+            this.Amount_TextBox.ShortcutsEnabled = true;
+            this.Amount_TextBox.Size = new System.Drawing.Size(121, 23);
+            this.Amount_TextBox.TabIndex = 4;
+            this.Amount_TextBox.UseSelectable = true;
+            this.Amount_TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Amount_TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // T_Shirt_Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 378);
+            this.Controls.Add(this.Amount_TextBox);
             this.Controls.Add(this.Make_Order);
             this.Controls.Add(this.size_chose);
             this.Controls.Add(this.Amount_label);
@@ -118,6 +175,9 @@
         private MetroFramework.Controls.MetroButton Make_Order;
         private System.Windows.Forms.MenuStrip Process_menu;
         private System.Windows.Forms.ToolStripMenuItem processToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displayOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private MetroFramework.Controls.MetroTextBox Amount_TextBox;
     }
 }
 
