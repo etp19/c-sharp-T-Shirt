@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace ClubTShirt
 {
-    public partial class T_Shirt_Sell : MetroFramework.Forms.MetroForm
+    /*
+     * Author:          Eduardo Torres
+     * Date:            10/31/2017
+     * Class:           T_Shirt_Sell
+     * Description:     This class creates various events that handle the make order button and the process menu. It also displays messages.      
+     */
+    public partial class T_Shirt_Sell : MetroForm
     {
         string size;
         int quatity;
@@ -26,20 +26,20 @@ namespace ClubTShirt
 
             // assign quantity
             quatity = Convert.ToInt32(Amount_TextBox.Text);
-            MetroFramework.MetroMessageBox.Show(this ,"Your order is complete");
+            MetroMessageBox.Show(this ,"Your order is complete");
         }
 
         private void displayOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // show message to user about the order size and quatity.
 
-            MetroFramework.MetroMessageBox.Show(this, "Size is " + size + " Quatity is " + quatity);
+            MetroMessageBox.Show(this, "Size is " + size + " Quatity is " + quatity);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // close application
-            this.Close();
+            Close();
         }
     }
 }

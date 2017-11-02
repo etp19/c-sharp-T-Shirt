@@ -1,11 +1,15 @@
-﻿namespace ClubTShirt
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using MetroFramework.Controls;
+
+namespace ClubTShirt
 {
     partial class T_Shirt_Sell
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -169,15 +173,15 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel Size_Label;
-        private MetroFramework.Controls.MetroLabel Amount_label;
-        private MetroFramework.Controls.MetroComboBox size_chose;
-        private MetroFramework.Controls.MetroButton Make_Order;
-        private System.Windows.Forms.MenuStrip Process_menu;
-        private System.Windows.Forms.ToolStripMenuItem processToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayOrderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private MetroFramework.Controls.MetroTextBox Amount_TextBox;
+        private MetroLabel Size_Label;
+        private MetroLabel Amount_label;
+        private MetroComboBox size_chose;
+        private MetroButton Make_Order;
+        private MenuStrip Process_menu;
+        private ToolStripMenuItem processToolStripMenuItem;
+        private ToolStripMenuItem displayOrderToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private MetroTextBox Amount_TextBox;
     }
 }
 
